@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import com.hmaurocastro.model.Usuario;
 import com.hmaurocastro.repository.UsuarioRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Controlador para manejar las solicitudes HTTP para usuarios
@@ -23,6 +25,8 @@ import com.hmaurocastro.repository.UsuarioRepository;
  */
 @RestController
 @RequestMapping("/usuarios")
+@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
+		RequestMethod.DELETE})
 public class RestUsuarioController {
 
 	@Autowired

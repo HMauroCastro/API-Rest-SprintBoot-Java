@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 /**
  * Entidad, Cargo o funcion de una persona en una empresa
@@ -13,6 +14,7 @@ import jakarta.persistence.Id;
  *
  */
 @Entity
+@Table(name = "cargo")
 public class Cargo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
